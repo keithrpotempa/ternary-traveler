@@ -8,6 +8,7 @@ const refresh = {
         apiHandler.getPlaces()
             .then(domManager.form.renderPlaceOptions)
             .then(eventListeners.addSaveEventListener)
+            .then(eventListeners.addClearEventListener)
     },
     poiList () {
         apiHandler.getPoiList()

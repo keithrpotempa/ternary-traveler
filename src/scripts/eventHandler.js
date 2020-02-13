@@ -42,6 +42,7 @@ const eventListeners = {
                     .then(domManager.form.renderPoiReviewForm)
                     .then(apiHandler.editReview)
                     .then(eventListeners.addSaveReviewEventListener)
+                    .then(eventListeners.addClearReviewEventListener)
             })
         })
     },
@@ -58,6 +59,18 @@ const eventListeners = {
             })
         })
     },
+    addClearEventListener() {
+        const clearBtn = document.querySelector(".reset-button");
+        clearBtn.addEventListener("click", () => {
+            apiHandler.clearForm();
+        })
+    },
+    addClearReviewEventListener() {
+        const clearBtn = document.querySelector(".reset-review-button");
+        clearBtn.addEventListener("click", () => {
+            apiHandler.clearReviewForm();
+        })
+    }
 }
 
 export default eventListeners 
