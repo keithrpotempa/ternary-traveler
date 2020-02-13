@@ -14,11 +14,25 @@ const htmlFactory = {
                 </fieldset>
             `
         },
-        makePoiForm() {
+        makePoiForm(poiId) {
+            // Passing this "new" if it is the initial "new form" creation
+            let title;
+            let value;
+            let articleId;
+            if (poiId == "new") {
+                title = "New Point of Interest"
+                articleId = "article-form__new"
+            // Otherwise, this will be passed the id of the poi being edited
+            } else {
+                title = "Editing Point of Interest"
+                value = poiId
+                articleId = `article-form-edit__${poiId}`
+            }
+
             return `
-                <article id="article__form">
-                    <input type="hidden" id="poi-id" value="">
-                    <h2>New Point of Interest</h2>
+                <article id="${articleId}">
+                    <input type="hidden" id="poi-id" value="${value}">
+                    <h2>${title}</h2>
                     <form action="">
                         <div>
                             <fieldset>
@@ -93,13 +107,16 @@ const htmlFactory = {
             let name = document.querySelector("#poi-name__field").value;
             let description = document.querySelector("#poi-description__field").value;
             let cost = document.querySelector("#poi-cost__field").value;
-            
+
+            if (cost === "") {cost = 0;} 
+            else {cost = parseInt(cost)}
+
             return {
                 "id": id,
                 "placeId": parseInt(placeId),
                 "name": name,
                 "description": description,
-                "cost": parseInt(cost)
+                "cost": cost
             }
         },
         makePoiReviewObject(){
@@ -108,11 +125,14 @@ const htmlFactory = {
             let rating = document.querySelector("#poi-rating__field").value;
             let cost = document.querySelector("#poi-review-cost__field").value;
 
+            if (cost === "") {cost = 0;} 
+            else {cost = parseInt(cost)}
+
             return {
                 "id": id,
                 "review": review,
                 "rating": parseInt(rating),
-                "cost": parseInt(cost)
+                "cost": cost
             }
         },
         makePoiHtml (poiObject) {

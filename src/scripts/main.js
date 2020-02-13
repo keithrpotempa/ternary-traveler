@@ -3,9 +3,10 @@ import domManager from './domManager.js'
 import eventListeners from './eventHandler.js'
 
 const refresh = {
-    form() {
-        domManager.form.renderPoiForm();
+    form(poId) {
+        domManager.form.renderPoiForm(poId);
         apiHandler.getPlaces()
+            .then(console.log)
             .then(domManager.form.renderPlaceOptions)
             .then(eventListeners.addSaveEventListener)
             .then(eventListeners.addClearEventListener)
@@ -19,7 +20,8 @@ const refresh = {
     }
 }
 
-refresh.form();
+// FIXME: Will have to add this back at the click of an "add new" button
+// refresh.form("new");
 refresh.poiList();
 
 export default refresh

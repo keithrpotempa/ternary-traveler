@@ -42,6 +42,7 @@ const apiHandler = {
             .then(response => response.json())
     },
     editPoi (poiObject) {
+        console.log(poiObject)
         document.querySelector("#poi-id").value = poiObject.id;
         document.querySelector("#place-options").value = poiObject.placeId;
         document.querySelector("#poi-name__field").value = poiObject.name;

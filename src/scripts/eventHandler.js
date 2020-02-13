@@ -34,7 +34,10 @@ const eventListeners = {
             btn.addEventListener("click", (e) => {
                 const poiId = e.target.id.split("--")[1]
                 apiHandler.getPoi(poiId)
-                    .then(apiHandler.editPoi)
+                    .then(refresh.form(poiId))
+                    .then(apiHandler.getPlaces())
+                        .then(domManager.form.renderPlaceOptions)
+                        .then(apiHandler.editPoi)
             })
         })
     },

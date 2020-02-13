@@ -23,7 +23,7 @@
       "name": "Colosseum",
       "description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre, is an oval amphitheatre in the centre of the city of Rome, Italy. Built of travertine limestone, tuff, and brick-faced concrete, it was the largest amphitheatre ever built at the time and held 50,000 to 80,000 spectators. The Colosseum is situated just east of the Roman Forum. Construction began under the emperor Vespasian in AD 72 and was completed in AD 80 under his successor and heir, Titus. Further modifications were made during the reign of Domitian. These three emperors are known as the Flavian dynasty, and the amphitheatre was named in Latin for its association with their family name. The Colosseum could hold an estimated 50,000 to 80,000 spectators at various points of its history over the centuries, having an average audience of some 65,000; it was used for gladiatorial contests and public spectacles such as mock sea battles, animal hunts, executions, re-enactments of famous battles, and dramas based on Classical mythology. The building ceased to be used for entertainment in the early medieval era.",
       "cost": 2,
-      "review": "Here is an example review",
+      "review": "Example review!",
       "rating": 5
     },
     {
@@ -31,35 +31,35 @@
       "placeId": 1,
       "name": "Cathedral of Santa Maria del Fiore",
       "description": "Florence Cathedral, formally the Cattedrale di Santa Maria del Fiore, is the cathedral of Florence, Italy. It was begun in 1296 in the Gothic style to a design of Arnolfo di Cambio and was structurally completed by 1436, with the dome designed by Filippo Brunelleschi. The exterior of the basilica is faced with polychrome marble panels in various shades of green and pink, bordered by white, and has an elaborate 19th-century Gothic Revival façade by Emilio De Fabris. The cathedral complex, in Piazza del Duomo, includes the Baptistery and Giotto's Campanile. These three buildings are part of the UNESCO World Heritage Site covering the historic centre of Florence and are a major tourist attraction of Tuscany. The basilica is one of Italy's largest churches, and until the development of new structural materials in the modern era, the dome was the largest in the world. It remains the largest brick dome ever constructed. The cathedral is the mother church of the Roman Catholic Archdiocese of Florence, whose archbishop is Giuseppe Betori.",
-      "cost": null
+      "cost": 0
     },
     {
       "id": 7,
       "placeId": 2,
       "name": "Jungfrau",
       "description": "The Jungfrau, at 4,158 meters is one of the main summits of the Bernese Alps, located between the northern canton of Bern and the southern canton of Valais, halfway between Interlaken and Fiesch. Together with the Eiger and Mönch, the Jungfrau forms a massive wall of mountains overlooking the Bernese Oberland and the Swiss Plateau, one of the most distinctive sights of the Swiss Alps. The summit was first reached on August 3, 1811, by the Meyer brothers of Aarau and two chamois hunters from Valais. The ascent followed a long expedition over the glaciers and high passes of the Bernese Alps. It was not until 1865 that a more direct route on the northern side was opened. The construction of the Jungfrau railway in the early 20th century, which connects Kleine Scheidegg to the Jungfraujoch, the saddle between the Mönch and the Jungfrau, made the area one of the most-visited places in the Alps. Along with the Aletsch Glacier to the south, the Jungfrau is part of the Jungfrau-Aletsch area, which was declared a World Heritage Site in 2001.",
-      "cost": null
+      "cost": 2
     },
     {
       "id": 8,
       "placeId": 2,
       "name": "Chillon Castle",
       "description": "Chillon Castle is an island castle located on Lake Geneva, south of Veytaux in the canton of Vaud. It is situated at the eastern end of the lake, on the narrow shore between Montreux and Villeneuve, which gives access to the Alpine valley of the Rhône. Chillon is amongst the most visited castles in Switzerland and Europe. Successively occupied by the house of Savoy then by the Bernese from 1536 until 1798, it now belongs to the State of Vaud and is classified as a Swiss Cultural Property of National Significance. The Fort de Chillon, its modern counterpart, is hidden in the steep side of the mountain. ",
-      "cost": null
+      "cost": 0
     },
     {
       "id": 9,
       "placeId": 3,
       "name": "Eiffel Tower",
       "description": "The Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower. Constructed from 1887 to 1889 as the entrance to the 1889 World's Fair, it was initially criticised by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognisable structures in the world. The Eiffel Tower is the most-visited paid monument in the world; 6.91 million people ascended it in 2015. The tower is 324 metres tall, about the same height as an 81-storey building, and the tallest structure in Paris. Its base is square, measuring 125 metres on each side. During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world, a title it held for 41 years until the Chrysler Building in New York City was finished in 1930. It was the first structure to reach a height of 300 metres. Due to the addition of a broadcasting aerial at the top of the tower in 1957, it is now taller than the Chrysler Building by 5.2 metres.",
-      "cost": null
+      "cost": 0
     },
     {
       "id": 10,
       "placeId": 3,
       "name": "Louvre Museum",
       "description": "The Louvre, or the Louvre Museum, is the world's largest art museum and a historic monument in Paris, France. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement. Approximately 38,000 objects from prehistory to the 21st century are exhibited over an area of 72,735 square meters. In 2019, the Louvre received 9.6 million visitors. The museum is housed in the Louvre Palace, originally built as the Louvre castle in the late 12th to 13th century under Philip II. Remnants of the fortress are visible in the basement of the museum. Due to urban expansion, the fortress eventually lost its defensive function, and in 1546 Francis I converted it into the primary residence of the French Kings. The building was extended many times to form the present Louvre Palace. In 1682, Louis XIV chose the Palace of Versailles for his household, leaving the Louvre primarily as a place to display the royal collection, including, from 1692, a collection of ancient Greek and Roman sculpture.",
-      "cost": null
+      "cost": 0
     }
   ]
 }
