@@ -15,7 +15,6 @@ const htmlFactory = {
             `
         },
         makePoiForm() {
-            // FIXME NEEDS WORKING CLEAR BUTTON
             return `
                 <article id="article__form">
                     <input type="hidden" id="poi-id" value="">
@@ -47,20 +46,21 @@ const htmlFactory = {
         makePoiReviewForm(poiObject) {
             let review = "";
             let rating = 1;
-            if (poiObject.review) {
+            if (poiObject.review !== undefined) {
                 review = poiObject.review;
             }
             if (poiObject.rating) {
                 rating = poiObject.rating;
             }
-                // FIXME NEEDS WORKING CLEAR BUTTON
             return `
             <article id="poi-review__form"> 
                 <input type="hidden" id="poi-review-id" value="${poiObject.id}">               
-                <h2>Add/Edit Review for: ${poiObject.name}</h2>
+                <h2>Add/Edit Review</h2>
+               
                 <div>
-                    <h3>Location: ${poiObject.place.name}</h3>
-                    <h3>Description: ${poiObject.description}</h3>
+                    <p><strong>Name:</strong>${poiObject.name}</p>
+                    <p><strong>Location:</strong> ${poiObject.place.name}</p>
+                    <p><strong>Description:</strong> ${poiObject.description}</p>
                 </div>
                 <div>
                     <fieldset>
@@ -98,7 +98,6 @@ const htmlFactory = {
                 "name": name,
                 "description": description,
                 "cost": parseInt(cost)
-
             }
         },
         makePoiReviewObject(){
@@ -117,23 +116,22 @@ const htmlFactory = {
         makePoiHtml (poiObject) {
             let reviewHtml = ""
             if (poiObject.review) {
-                reviewHtml += `
-                    <h3>Review: ${poiObject.review}</h3>
-                `
+                reviewHtml += `<p><strong>Review:</strong> ${poiObject.review}</p>`
             }
             if (poiObject.rating) {
-                reviewHtml += `
-                    <h3>Rating: ${poiObject.rating}</h3>
-                `
+                reviewHtml += `<p><strong>Rating:</strong> ${poiObject.rating}</p>`
+            }
+
+            if (poiObject.cost) {
+                reviewHtml += `<p><strong>Cost:</strong> ${poiObject.cost}</p>`
             }
 
             return `
                 <article>                
                     <h2>${poiObject.name}</h2>
                     <div>
-                        <h3>Location: ${poiObject.place.name}</h3>
-                        <h3>Description: ${poiObject.description}</h3>
-                        <h3>Cost: ${poiObject.cost}</h3>
+                        <p><strong>Location:</strong> ${poiObject.place.name}</p>
+                        <p><strong>Description:</strong> ${poiObject.description}</p>
                         ${reviewHtml}
                     </div>
                     <button class="delete-button" id="delete-button--${poiObject.id}">DELETE</button>

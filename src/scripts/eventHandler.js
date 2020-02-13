@@ -2,15 +2,20 @@ import apiHandler from "./apiHandler.js";
 import htmlFactory from "./htmlFactory.js";
 import refresh from './main.js'
 import domManager from "./domManager.js";
+import validation from "./validation.js"
 
 const eventListeners = {
     addSaveEventListener(){
         const saveBtn = document.querySelector(".save-button");
         saveBtn.addEventListener("click", () => {
             const poiObject = htmlFactory.poi.makePoiObject()
-            apiHandler.savePoi(poiObject)
-                .then(apiHandler.clearForm())
-                .then(refresh.poiList);
+            if (validation.poiRequiredFields(poiObject)) {
+                apiHandler.savePoi(poiObject)
+                    .then(apiHandler.clearForm())
+                    .then(refresh.poiList);
+            } else {
+                alert("Please enter all required fields")
+            }
         })
     },
     addSaveReviewEventListener(){
@@ -42,6 +47,7 @@ const eventListeners = {
                     .then(domManager.form.renderPoiReviewForm)
                     .then(apiHandler.editReview)
                     .then(eventListeners.addSaveReviewEventListener)
+                    .then(eventListeners.addClearReviewEventListener)
             })
         })
     },
@@ -58,6 +64,18 @@ const eventListeners = {
             })
         })
     },
+    addClearEventListener() {
+        const clearBtn = document.querySelector(".reset-button");
+        clearBtn.addEventListener("click", () => {
+            apiHandler.clearForm();
+        })
+    },
+    addClearReviewEventListener() {
+        const clearBtn = document.querySelector(".reset-review-button");
+        clearBtn.addEventListener("click", () => {
+            apiHandler.clearReviewForm();
+        })
+    }
 }
 
 export default eventListeners 
