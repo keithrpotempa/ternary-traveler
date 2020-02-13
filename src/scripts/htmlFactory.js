@@ -17,7 +17,7 @@ const htmlFactory = {
         makePoiForm() {
             return `
                 <article id="article__form">
-                    <input type="hidden" id="entry-id" value="">
+                    <input type="hidden" id="poi-id" value="">
                     <h2>New Point of Interest</h2>
                     <form action="">
                         <div id="place-options__container"></div>
@@ -43,6 +43,38 @@ const htmlFactory = {
                 </article>
                 `
         }
+    },
+    poi: {
+        makePoiObject() {
+            let id = document.querySelector("#poi-id").value;
+            let placeId = document.querySelector("#place-options").value;
+            let name = document.querySelector("#poi-name__field").value;
+            let description = document.querySelector("#poi-description__field").value;
+            let cost = document.querySelector("#poi-cost__field").value;
+
+            return {
+                "id": id,
+                "placeId": placeId,
+                "name": name,
+                "description": description,
+                "cost": cost
+            }
+        },
+        makePoiHtml (poiObject) {
+            return `
+                <article>                
+                    <h2>${poiObject.name}</h2>
+                    <div>
+                        // FIXME: Will require expanding...
+                        <h3>Location: ${poiObject.placeId}</h3>
+                        <h3>Description: ${poiObject.description}</h3>
+                        <h3>Cost: ${poiObject.cost}</h3>
+                    </div>
+                    <button class="delete-button" id="delete-button--${poiObject.id}">DELETE</button>
+                    <button class="edit-button" id="edit-button--${poiObject.id}">EDIT</button>
+                </article>
+                `
+        },
     }
 }
 

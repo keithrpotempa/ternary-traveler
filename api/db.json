@@ -1,20 +1,28 @@
 {
-    "places": [
-      { 
-        "id": 1, 
-        "name": "Italy", 
-        "visa_required": false 
-      },
-      { 
-        "id": 2, 
-        "name": "Switzerland", 
-        "visa_required": true 
-      },
-      { 
-        "id": 3, 
-        "name": "France", 
-        "visa_required": false
-      }
-    ],
-    "interests": []
-  }
+  "places": [
+    {
+      "id": 1,
+      "name": "Italy",
+      "visa_required": false
+    },
+    {
+      "id": 2,
+      "name": "Switzerland",
+      "visa_required": true
+    },
+    {
+      "id": 3,
+      "name": "France",
+      "visa_required": false
+    }
+  ],
+  "interests": [
+    {
+      "id": 1,
+      "placeId": "1",
+      "name": "TEST",
+      "description": "THIS",
+      "cost": "2"
+    }
+  ]
+}

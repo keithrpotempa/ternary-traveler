@@ -12,6 +12,16 @@ const domManager = {
             let html = htmlFactory.form.makePlaceOptions(places);
             container.innerHTML = html;
         }
+    },
+    poi: {
+        renderPoiList (poiList) {
+            const container = document.querySelector("#poi-list__div")
+            container.innerHTML = "<h2>Point of Interest List</h2>"
+            poiList.forEach(poi => {
+                let poiHTML = htmlFactory.poi.makePoiHtml(poi);
+                container.innerHTML += poiHTML;
+            });
+        }
     }
 }
 
