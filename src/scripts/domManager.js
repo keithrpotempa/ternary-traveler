@@ -2,7 +2,7 @@ import htmlFactory from './htmlFactory.js'
 
 const domManager = {
     form: {
-        renderForm () {
+        renderPoiForm () {
             const formContainer = document.querySelector("#poi-form__div")
             let formHTML = htmlFactory.form.makePoiForm();
             formContainer.innerHTML = formHTML;
@@ -11,6 +11,17 @@ const domManager = {
             const container = document.querySelector("#place-options__container")
             let html = htmlFactory.form.makePlaceOptions(places);
             container.innerHTML = html;
+        },
+        renderPoiReviewForm (poiObject) {
+            //TODO: update this container so its next to the entry...
+            const container = document.querySelector("#poi-review__placeholder");
+            let formHTML = htmlFactory.form.makePoiReviewForm(poiObject);
+            container.innerHTML = formHTML;
+            return poiObject;
+        },
+        removePoiReviewForm () {
+            const container = document.querySelector("#poi-review__placeholder");
+            container.innerHTML = ""
         }
     },
     poi: {

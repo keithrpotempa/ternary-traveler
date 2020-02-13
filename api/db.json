@@ -31,8 +31,8 @@
       "placeId": 2,
       "name": "TEST 2",
       "description": "THIS IS TEH SECOND",
-      "cost": 3,
-      "review": "TESTING... 123",
+      "cost": 2,
+      "review": "NEW REVIEW OF TEST2",
       "rating": 4
     },
     {
@@ -41,7 +41,8 @@
       "name": "TEST3",
       "description": "TEST3",
       "cost": 1,
-      "review": "Reviewwwww"
+      "review": "Reviewwwww UPDATED DOES FORM DISAPPEAR?",
+      "rating": 3
     }
   ]
 }

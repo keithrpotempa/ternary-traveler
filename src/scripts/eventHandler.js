@@ -1,6 +1,7 @@
 import apiHandler from "./apiHandler.js";
 import htmlFactory from "./htmlFactory.js";
 import refresh from './main.js'
+import domManager from "./domManager.js";
 
 const eventListeners = {
     addSaveEventListener(){
@@ -12,6 +13,16 @@ const eventListeners = {
                 .then(refresh.poiList);
         })
     },
+    addSaveReviewEventListener(){
+        const saveBtn = document.querySelector(".save-review-button");
+        saveBtn.addEventListener("click", () => {
+            const poiReviewObject = htmlFactory.poi.makePoiReviewObject()
+            apiHandler.savePoiReview(poiReviewObject)
+                .then(apiHandler.clearReviewForm())
+                .then(refresh.poiList)
+                .then(domManager.form.removePoiReviewForm)
+        })
+    },
     addEditEventListener() {
         const editBtns = document.querySelectorAll(".edit-button");
         editBtns.forEach(btn => {
@@ -19,6 +30,18 @@ const eventListeners = {
                 const poiId = e.target.id.split("--")[1]
                 apiHandler.getPoi(poiId)
                     .then(apiHandler.editPoi)
+            })
+        })
+    },
+    addEditReviewEventListener() {
+        const editBtns = document.querySelectorAll(".edit-review-button");
+        editBtns.forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                const poiId = e.target.id.split("--")[1]
+                apiHandler.getPoi(poiId)
+                    .then(domManager.form.renderPoiReviewForm)
+                    .then(apiHandler.editReview)
+                    .then(eventListeners.addSaveReviewEventListener)
             })
         })
     },
