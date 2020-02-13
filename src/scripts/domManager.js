@@ -27,7 +27,7 @@ const domManager = {
     poi: {
         renderPoiList (poiList) {
             const container = document.querySelector("#poi-list__div")
-            container.innerHTML = "<h2>Point of Interest List</h2>"
+            container.innerHTML = ""
             poiList.forEach(poi => {
                 let poiHTML = htmlFactory.poi.makePoiHtml(poi);
                 container.innerHTML += poiHTML;
