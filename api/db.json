@@ -23,6 +23,27 @@
       "name": "TEST",
       "description": "THIS",
       "cost": "2"
+    },
+    {
+      "id": 2,
+      "placeId": "2",
+      "name": "TEST 2",
+      "description": "THIS IS TEH SECOND",
+      "cost": "3"
+    },
+    {
+      "id": 3,
+      "placeId": "1",
+      "name": "TEST3",
+      "description": "TEST3",
+      "cost": "1"
+    },
+    {
+      "id": 4,
+      "placeId": "1",
+      "name": "TEST4",
+      "description": "TEST4",
+      "cost": "3"
     }
   ]
 }

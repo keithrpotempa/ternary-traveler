@@ -8,8 +8,7 @@ const eventListeners = {
         saveBtn.addEventListener("click", () => {
             const poiObject = htmlFactory.poi.makePoiObject()
             apiHandler.savePoi(poiObject)
-            // TODO: Make this
-                // .then(API.clearFields())
+                .then(apiHandler.clearForm())
                 .then(refresh.poiList());
         })
     }

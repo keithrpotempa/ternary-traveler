@@ -65,8 +65,7 @@ const htmlFactory = {
                 <article>                
                     <h2>${poiObject.name}</h2>
                     <div>
-                        // FIXME: Will require expanding...
-                        <h3>Location: ${poiObject.placeId}</h3>
+                        <h3>Location: ${poiObject.place.name}</h3>
                         <h3>Description: ${poiObject.description}</h3>
                         <h3>Cost: ${poiObject.cost}</h3>
                     </div>

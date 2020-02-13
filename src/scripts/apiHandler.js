@@ -6,7 +6,7 @@ const apiHandler = {
             .then(response => response.json())
     },
     getPoiList () {
-        return fetch(`${this.baseUrl}/interests`)
+        return fetch(`${this.baseUrl}/interests?_expand=place`)
             .then(response => response.json())
     },
     savePoi (poiObject) {
@@ -25,6 +25,13 @@ const apiHandler = {
                 body: JSON.stringify(poiObject)
             })
         } 
+    }, 
+    clearForm () {
+        const fields = ["#poi-id", "#place-options", "#poi-name__field", "#poi-description__field", "#poi-cost__field"]
+
+        fields.forEach(field => {
+            document.querySelector(field).value = document.querySelector(field).defaultValue;
+        })
     }
 }
 
