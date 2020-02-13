@@ -30,6 +30,10 @@ const apiHandler = {
             })
         } 
     }, 
+    deletePoi (poiId) {
+        return fetch(`${this.baseUrl}/interests/${poiId}`, {method: "DELETE"})
+            .then(response => response.json())
+    },
     editPoi (poiObject) {
         document.querySelector("#poi-id").value = poiObject.id
         document.querySelector("#place-options").value = poiObject.placeId

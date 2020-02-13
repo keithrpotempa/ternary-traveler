@@ -22,6 +22,19 @@ const eventListeners = {
             })
         })
     },
+    addDeleteEventListener() {
+        const deleteBtns = document.querySelectorAll(".delete-button");
+        deleteBtns.forEach(btn => {
+            const poiId = btn.id.split("--")[1]
+            btn.addEventListener("click", () => {
+                const response = confirm("Are you sure you want to delete this entry?")
+                if (response) {
+                    apiHandler.deletePoi(poiId)
+                        .then(refresh.poiList);
+                }
+            })
+        })
+    },
 }
 
 export default eventListeners 
