@@ -1,0 +1,95 @@
+article {
+    display: flex;
+    flex-direction: column;
+    background-color: #E9EFFD;
+    box-shadow: 5px 5px;
+    margin: 10px;
+    border: 2px solid black;
+    padding: .5em;
+    max-width: 350px;
+}
+
+#poi-list__div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 1px solid thistle;
+    margin-top: .25em;
+}
+
+#poi-form__div, #poi-review__placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#article__form {
+    width: 50%
+}
+
+input[type=text], input[type=number], textarea, select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    display: flex;
+    border: none;
+    justify-content: center;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+
+.row-fields {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.save-button, .save-review-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+.save-button:hover, .save-review-button:hover {
+    background-color: #45a049;
+  }
+
+.reset-button, .reset-review-button {
+    background-color: whitesmoke;
+}
+
+.reset-button:hover, .reset-review-button:hover {
+    background-color: lightgray;
+  }
+
+button {
+    padding: 12px 20px;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: .25em
+  }

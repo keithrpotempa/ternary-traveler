@@ -7,7 +7,7 @@ const htmlFactory = {
             })
             return `
                 <fieldset>
-                    <label for="place-options">Places</label>
+                    <label for="place-options">Place</label>
                     <select name="place-options" id="place-options">
                         ${placeOptionsHtml}
                     </select> 
@@ -20,7 +20,6 @@ const htmlFactory = {
                     <input type="hidden" id="poi-id" value="">
                     <h2>New Point of Interest</h2>
                     <form action="">
-                        <div id="place-options__container"></div>
                         <div>
                             <fieldset>
                                 <label for="poi-name__field">Name</label>
@@ -30,10 +29,13 @@ const htmlFactory = {
                                 <label for="poi-description__field">Description</label>
                                 <textarea name="poi-description__field" id="poi-description__field" placeholder="Enter description here..."></textarea>
                             </fieldset>
-                            <fieldset>
-                                <label for="poi-cost__field">Cost</label>
-                                <input type="number" name="poi-cost__field" id="poi-cost__field"></input>
-                            </fieldset>
+                            <div class="row-fields">
+                                <div id="place-options__container"></div>
+                                <fieldset>
+                                    <label for="poi-cost__field">Cost</label>
+                                    <input type="number" name="poi-cost__field" id="poi-cost__field"></input>
+                                </fieldset>
+                            </div>
                         </div>
                     </form>
                     <div class="buttons">       
@@ -134,9 +136,11 @@ const htmlFactory = {
                         <p><strong>Description:</strong> ${poiObject.description}</p>
                         ${reviewHtml}
                     </div>
-                    <button class="delete-button" id="delete-button--${poiObject.id}">DELETE</button>
-                    <button class="edit-button" id="edit-button--${poiObject.id}">EDIT DETAILS</button>
-                    <button class="edit-review-button" id="edit-review-button--${poiObject.id}">ADD/EDIT REVIEW</button>
+                    <div class="buttons"> 
+                        <button class="delete-button" id="delete-button--${poiObject.id}">DELETE</button>
+                        <button class="edit-button" id="edit-button--${poiObject.id}">EDIT DETAILS</button>
+                        <button class="edit-review-button" id="edit-review-button--${poiObject.id}">ADD/EDIT REVIEW</button>
+                    </div> 
                 </article>
                 `
         },
