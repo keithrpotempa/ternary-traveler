@@ -23,7 +23,7 @@
       "name": "Colosseum",
       "description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre, is an oval amphitheatre in the centre of the city of Rome, Italy. Built of travertine limestone, tuff, and brick-faced concrete, it was the largest amphitheatre ever built at the time and held 50,000 to 80,000 spectators. The Colosseum is situated just east of the Roman Forum. Construction began under the emperor Vespasian in AD 72 and was completed in AD 80 under his successor and heir, Titus. Further modifications were made during the reign of Domitian. These three emperors are known as the Flavian dynasty, and the amphitheatre was named in Latin for its association with their family name. The Colosseum could hold an estimated 50,000 to 80,000 spectators at various points of its history over the centuries, having an average audience of some 65,000; it was used for gladiatorial contests and public spectacles such as mock sea battles, animal hunts, executions, re-enactments of famous battles, and dramas based on Classical mythology. The building ceased to be used for entertainment in the early medieval era.",
       "cost": 2,
-      "review": "Here is an example review",
+      "review": "Here is an example review. Updated.",
       "rating": 5
     },
     {
@@ -59,6 +59,13 @@
       "placeId": 3,
       "name": "Louvre Museum",
       "description": "The Louvre, or the Louvre Museum, is the world's largest art museum and a historic monument in Paris, France. A central landmark of the city, it is located on the Right Bank of the Seine in the city's 1st arrondissement. Approximately 38,000 objects from prehistory to the 21st century are exhibited over an area of 72,735 square meters. In 2019, the Louvre received 9.6 million visitors. The museum is housed in the Louvre Palace, originally built as the Louvre castle in the late 12th to 13th century under Philip II. Remnants of the fortress are visible in the basement of the museum. Due to urban expansion, the fortress eventually lost its defensive function, and in 1546 Francis I converted it into the primary residence of the French Kings. The building was extended many times to form the present Louvre Palace. In 1682, Louis XIV chose the Palace of Versailles for his household, leaving the Louvre primarily as a place to display the royal collection, including, from 1692, a collection of ancient Greek and Roman sculpture.",
+      "cost": null
+    },
+    {
+      "id": 11,
+      "placeId": 1,
+      "name": "Pantheon",
+      "description": "The Pantheon is a former Roman temple, now a church, in Rome, Italy, on the site of an earlier temple commissioned by Marcus Agrippa during the reign of Augustus. It was completed by the emperor Hadrian and probably dedicated about 126 AD. Its date of construction is uncertain, because Hadrian chose not to inscribe the new temple but rather to retain the inscription of Agrippa's older temple, which had burned down. The building is cylindrical with a portico of large granite Corinthian columns under a pediment. A rectangular vestibule links the porch to the rotunda, which is under a coffered concrete dome, with a central opening to the sky. Almost two thousand years after it was built, the Pantheon's dome is still the world's largest unreinforced concrete dome. The height to the oculus and the diameter of the interior circle are the same, 43 metres. It is one of the best-preserved of all Ancient Roman buildings, in large part because it has been in continuous use throughout its history and, since the 7th century, the Pantheon has been in use as a church dedicated to \"St. Mary and the Martyrs\" but informally known as \"Santa Maria Rotonda\".",
       "cost": null
     }
   ]
