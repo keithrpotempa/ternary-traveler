@@ -9,7 +9,7 @@ const eventListeners = {
             const poiObject = htmlFactory.poi.makePoiObject()
             apiHandler.savePoi(poiObject)
                 .then(apiHandler.clearForm())
-                .then(refresh.poiList());
+                .then(refresh.poiList);
         })
     },
     addEditEventListener() {

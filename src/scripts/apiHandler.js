@@ -35,14 +35,15 @@ const apiHandler = {
             .then(response => response.json())
     },
     editPoi (poiObject) {
-        document.querySelector("#poi-id").value = poiObject.id
-        document.querySelector("#place-options").value = poiObject.placeId
-        document.querySelector("#poi-name__field").value = poiObject.name
-        document.querySelector("#poi-description__field").value = poiObject.description
-        document.querySelector("#poi-cost__field").value = poiObject.cost
+        document.querySelector("#poi-id").value = poiObject.id;
+        document.querySelector("#place-options").value = poiObject.placeId;
+        document.querySelector("#poi-name__field").value = poiObject.name;
+        document.querySelector("#poi-description__field").value = poiObject.description;
+        document.querySelector("#poi-cost__field").value = poiObject.cost;
+        document.querySelector("#poi-review__field").value = poiObject.review;
     },
     clearForm () {
-        const fields = ["#poi-id", "#place-options", "#poi-name__field", "#poi-description__field", "#poi-cost__field"]
+        const fields = ["#poi-id", "#place-options", "#poi-name__field", "#poi-description__field", "#poi-cost__field", "#poi-review__field"]
 
         fields.forEach(field => {
             document.querySelector(field).value = document.querySelector(field).defaultValue;

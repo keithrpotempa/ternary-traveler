@@ -34,6 +34,14 @@ const htmlFactory = {
                                 <label for="poi-cost__field">Cost</label>
                                 <input type="number" name="poi-cost__field" id="poi-cost__field"></input>
                             </fieldset>
+                            <fieldset>
+                                <label for="poi-review__field">Review</label>
+                                <textarea name="poi-review__field" id="poi-review__field" placeholder="Enter review here..."></textarea>
+                            </fieldset>
+                            <fieldset>
+                                <label for="poi-rating__field">Rating (1-5)</label>
+                                <input type="number" name="poi-rating__field" id="poi-rating__field" min="1" max="5"></input>
+                            </fieldset>
                         </div>
                     </form>
                     <div class="buttons">       
@@ -51,16 +59,32 @@ const htmlFactory = {
             let name = document.querySelector("#poi-name__field").value;
             let description = document.querySelector("#poi-description__field").value;
             let cost = document.querySelector("#poi-cost__field").value;
+            let review = document.querySelector("#poi-review__field").value;
+            let rating = document.querySelector("#poi-rating__field").value;
 
             return {
                 "id": id,
                 "placeId": parseInt(placeId),
                 "name": name,
                 "description": description,
-                "cost": parseInt(cost)
+                "cost": parseInt(cost),
+                "review": review,
+                "rating": parseInt(rating)
             }
         },
         makePoiHtml (poiObject) {
+            let reviewHtml = ""
+            if (poiObject.review) {
+                reviewHtml += `
+                    <h3>Review: ${poiObject.review}</h3>
+                `
+            }
+            if (poiObject.rating) {
+                reviewHtml += `
+                    <h3>Review: ${poiObject.rating}</h3>
+                `
+            }
+
             return `
                 <article>                
                     <h2>${poiObject.name}</h2>
@@ -68,6 +92,7 @@ const htmlFactory = {
                         <h3>Location: ${poiObject.place.name}</h3>
                         <h3>Description: ${poiObject.description}</h3>
                         <h3>Cost: ${poiObject.cost}</h3>
+                        ${reviewHtml}
                     </div>
                     <button class="delete-button" id="delete-button--${poiObject.id}">DELETE</button>
                     <button class="edit-button" id="edit-button--${poiObject.id}">EDIT</button>
