@@ -48,9 +48,15 @@ const apiHandler = {
         document.querySelector("#poi-description__field").value = poiObject.description;
     },
     editReview (poiObject) {
-        document.querySelector("#poi-review-cost__field").value = poiObject.cost;
-        document.querySelector("#poi-review__field").value = poiObject.review;
-        document.querySelector("#poi-rating__field").value = poiObject.rating;
+        if (poiObject.cost) {
+            document.querySelector("#poi-review-cost__field").value = poiObject.cost;
+        }
+        if (poiObject.review) {
+            document.querySelector("#poi-review__field").value = poiObject.review;
+        }
+        if (poiObject.rating) {
+            document.querySelector("#poi-rating__field").value = poiObject.rating;
+        }
     },
     clearForm () {
         const fields = ["#poi-id", "#place-options", "#poi-name__field", "#poi-description__field", "#poi-cost__field"]
