@@ -129,19 +129,21 @@ const htmlFactory = {
             }
 
             return `
-                <article>                
-                    <h2>${poiObject.name}</h2>
-                    <div>
-                        <p><strong>Location:</strong> ${poiObject.place.name}</p>
-                        <p><strong>Description:</strong> ${poiObject.description}</p>
-                        ${reviewHtml}
-                    </div>
-                    <div class="buttons"> 
-                        <button class="delete-button" id="delete-button--${poiObject.id}">DELETE</button>
-                        <button class="edit-button" id="edit-button--${poiObject.id}">EDIT DETAILS</button>
-                        <button class="edit-review-button" id="edit-review-button--${poiObject.id}">ADD/EDIT REVIEW</button>
-                    </div> 
-                </article>
+                <div id="poi-container__${poiObject.id}">
+                    <article>                
+                        <h2>${poiObject.name}</h2>
+                        <div>
+                            <p><strong>Location:</strong> ${poiObject.place.name}</p>
+                            <p><strong>Description:</strong> ${poiObject.description}</p>
+                            ${reviewHtml}
+                        </div>
+                        <div class="buttons"> 
+                            <button class="delete-button" id="delete-button--${poiObject.id}">DELETE</button>
+                            <button class="edit-button" id="edit-button--${poiObject.id}">EDIT DETAILS</button>
+                            <button class="edit-review-button" id="edit-review-button--${poiObject.id}">ADD/EDIT REVIEW</button>
+                        </div> 
+                    </article>
+                </div>
                 `
         },
     }

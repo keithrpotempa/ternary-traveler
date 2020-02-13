@@ -13,8 +13,7 @@ const domManager = {
             container.innerHTML = html;
         },
         renderPoiReviewForm (poiObject) {
-            //TODO: update this container so its next to the entry...
-            const container = document.querySelector("#poi-review__placeholder");
+            const container = document.querySelector(`#poi-container__${poiObject.id}`);
             let formHTML = htmlFactory.form.makePoiReviewForm(poiObject);
             container.innerHTML = formHTML;
             return poiObject;
