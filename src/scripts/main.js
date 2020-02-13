@@ -13,7 +13,7 @@ const refresh = {
         apiHandler.getPoiList()
             .then(domManager.poi.renderPoiList)
         //TODO: Make these
-        //     .then(eventListeners.addDeleteEventListener)
+            .then(eventListeners.addDeleteEventListener)
             .then(eventListeners.addEditEventListener)
     }
 }
