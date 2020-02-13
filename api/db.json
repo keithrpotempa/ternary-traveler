@@ -22,21 +22,27 @@
       "placeId": 1,
       "name": "UPDATE",
       "description": "THIS",
-      "cost": 2
+      "cost": 2,
+      "review": "",
+      "rating": null
     },
     {
       "id": 2,
       "placeId": 2,
       "name": "TEST 2",
       "description": "THIS IS TEH SECOND",
-      "cost": 3
+      "cost": 2,
+      "review": "NEW REVIEW OF TEST2",
+      "rating": 4
     },
     {
       "id": 3,
       "placeId": 1,
       "name": "TEST3",
       "description": "TEST3",
-      "cost": 1
+      "cost": 1,
+      "review": "Reviewwwww UPDATED DOES FORM DISAPPEAR?",
+      "rating": 3
     }
   ]
 }
