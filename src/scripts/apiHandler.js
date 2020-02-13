@@ -9,6 +9,10 @@ const apiHandler = {
         return fetch(`${this.baseUrl}/interests?_expand=place`)
             .then(response => response.json())
     },
+    getPoi (poiId) {
+        return fetch(`${this.baseUrl}/interests/${poiId}?_expand=place`)
+            .then(response => response.json())
+    },
     savePoi (poiObject) {
         // If there is an id, the user is editing an existing entry
         if (poiObject.id) {
@@ -26,6 +30,13 @@ const apiHandler = {
             })
         } 
     }, 
+    editPoi (poiObject) {
+        document.querySelector("#poi-id").value = poiObject.id
+        document.querySelector("#place-options").value = poiObject.placeId
+        document.querySelector("#poi-name__field").value = poiObject.name
+        document.querySelector("#poi-description__field").value = poiObject.description
+        document.querySelector("#poi-cost__field").value = poiObject.cost
+    },
     clearForm () {
         const fields = ["#poi-id", "#place-options", "#poi-name__field", "#poi-description__field", "#poi-cost__field"]
 
