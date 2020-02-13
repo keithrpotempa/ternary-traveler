@@ -54,10 +54,10 @@ const htmlFactory = {
 
             return {
                 "id": id,
-                "placeId": placeId,
+                "placeId": parseInt(placeId),
                 "name": name,
                 "description": description,
-                "cost": cost
+                "cost": parseInt(cost)
             }
         },
         makePoiHtml (poiObject) {

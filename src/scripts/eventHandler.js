@@ -11,7 +11,17 @@ const eventListeners = {
                 .then(apiHandler.clearForm())
                 .then(refresh.poiList());
         })
-    }
+    },
+    addEditEventListener() {
+        const editBtns = document.querySelectorAll(".edit-button");
+        editBtns.forEach(btn => {
+            btn.addEventListener("click", (e) => {
+                const poiId = e.target.id.split("--")[1]
+                apiHandler.getPoi(poiId)
+                    .then(apiHandler.editPoi)
+            })
+        })
+    },
 }
 
 export default eventListeners 

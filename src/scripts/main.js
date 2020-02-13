@@ -14,7 +14,7 @@ const refresh = {
             .then(domManager.poi.renderPoiList)
         //TODO: Make these
         //     .then(eventListeners.addDeleteEventListener)
-        //     .then(eventListeners.addEditEventListener)
+            .then(eventListeners.addEditEventListener)
     }
 }
 
